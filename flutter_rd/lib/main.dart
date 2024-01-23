@@ -12,9 +12,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/':(context) => const MyLoginPage(title: 'Login'),
+        '/':(context) => const MyHomePage(),
         '/rd':(context) => const RemoteDesktop(),
       }
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget{
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: Color.fromRGBO(134, 153, 179, 1),
+      body: Center(
+        child: SizedBox(
+          width: 400,
+          height: 350,
+          child: Card(
+            child: MyLoginPage(title: 'login'),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -24,10 +44,10 @@ class MyLoginPage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyLoginPage> createState() => _MyHomePageState();
+  State<MyLoginPage> createState() => _LoginPageState();
 }
 
-class _MyHomePageState extends State<MyLoginPage> {
+class _LoginPageState extends State<MyLoginPage> {
   final _username = TextEditingController();
   final _password = TextEditingController();
   bool _formFinished = false;
