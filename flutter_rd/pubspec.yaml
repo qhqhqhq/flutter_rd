@@ -32,6 +32,7 @@ dependencies:
   dart_webrtc: 1.1.3
   webrtc_interface: 1.1.2
   flutter_webrtc: 0.9.47
+  web_socket_channel: ^2.4.0
   flutter:
     sdk: flutter
 
@@ -56,19 +57,19 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  plugin:
-    platforms:
-      android:
-        package: com.cloudwebrtc.webrtc
-        pluginClass: FlutterWebRTCPlugin
-      ios:
-        pluginClass: FlutterWebRTCPlugin
-      macos:
-        pluginClass: FlutterWebRTCPlugin
-      windows:
-        pluginClass: FlutterWebRTCPlugin
-      linux:
-        pluginClass: FlutterWebRTCPlugin
+  # plugin:
+  #   platforms:
+  #     android:
+  #       package: com.cloudwebrtc.webrtc
+  #       pluginClass: FlutterWebRTCPlugin
+  #     ios:
+  #       pluginClass: FlutterWebRTCPlugin
+  #     macos:
+  #       pluginClass: FlutterWebRTCPlugin
+  #     windows:
+  #       pluginClass: FlutterWebRTCPlugin
+  #     linux:
+  #       pluginClass: FlutterWebRTCPlugin
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
